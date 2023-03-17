@@ -5,7 +5,7 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -51,4 +51,33 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    //enviar email
+    
+
+      //sendEmail();
+
+      
+
+      
+
+
 });
+
+
+function sendEmail() {
+    console.log("Entro en la funcion email")
+    Email.send(
+        {
+            Host: "smtp.gmail.com",
+            Username: "brianfblanco@gmail.com",
+            Password: "brian1999r01121999google",
+            To: 'brianfblanco@gmail.com',
+            From: "brianfblanco@gmail.com",
+            Subject: "Sending Email using javascript",
+            Body: "Well that was easy!!",
+        })
+      .then(function (message) {
+        console.log("mail sent successfully")
+      });
+
+  }
